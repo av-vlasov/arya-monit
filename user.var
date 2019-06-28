@@ -1,0 +1,9 @@
+### Config users vars ###
+## check mem ##
+LIMIT_PERC='15'
+## check_space
+MAX_SPACE_PERC='80'
+CRITICAL_SPACE_PERC='90'
+EXCLUDE_LIST="loop tmpfs backup"
+## check services ##
+SERVICE_LIST="nginx cron apache2"

@@ -1,0 +1,14 @@
+### Main Variable ###
+## Main ##
+DIR=$(pwd)
+LOG="$DIR/log"
+DATE=$(date +%F)
+## Command ##
+ECHO="$(which echo) -e)"
+TIME="date +%T"
+#check_LA
+CORE=$(nproc)
+LIMIT_LA=$(echo "$CORE - 0.5" | bc )
+#check_mem
+TOTAL_MEM=$(free -m | sed -s '1d' | awk '{print$2}' | head -n1)
+TOTAL_SWAP=$(free -m | sed -s '1d' | awk '{print$2}' | tail -n1)
